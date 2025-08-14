@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Feedback System</h1>
+
+        <div class="feedback-form-container">
+            <h2>Leave a Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="product">Product</option>
+                        <option value="service">Service</option>
+                        <option value="website">Website</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Rating:</label>
+                    <div class="rating-stars" id="rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+
+        <div class="feedback-display-container">
+            <h2>Feedback Dashboard</h2>
+            <div class="dashboard-stats">
+                <div class="stat-box">
+                    <h3>Total Feedback</h3>
+                    <p id="totalFeedbackCount">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Average Rating</h3>
+                    <p id="averageRating">0.0</p>
+                </div>
+            </div>
+            <div id="feedbackList">
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="marquee">
+            <p>Feedback Management System</p>
+            <p>Ashish</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
